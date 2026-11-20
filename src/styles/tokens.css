@@ -1,0 +1,50 @@
+:root {
+  /* Palette — deep black, restrained crimson, bone white, controlled cool accents */
+  --token-void: #030304;
+  --token-ink: #050506;
+  --token-surface: #0a0a0d;
+  --token-surface-raised: #101014;
+  --token-bone: #f4f1ec;
+  --token-mist: #a09d99;
+  --token-mist-dim: #807d79;
+  --token-crimson: #d21f3c;
+  --token-crimson-bright: #ff4d5e;
+  --token-crimson-deep: #6d0d1b;
+  --token-cyan: #5fe3e0;
+  --token-electric: #4f7dff;
+  --token-line: rgba(244, 241, 236, 0.12);
+  --token-line-strong: rgba(244, 241, 236, 0.26);
+  --token-line-crimson: rgba(210, 31, 60, 0.48);
+  --token-glow-crimson: rgba(210, 31, 60, 0.22);
+  --token-glow-cyan: rgba(95, 227, 224, 0.12);
+
+  /* Typography */
+  --token-font-brand: "Space Grotesk Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --token-font-display: "Space Grotesk Variable", "Noto Sans Arabic Variable", ui-sans-serif, system-ui, sans-serif;
+  --token-font-body: "Inter Variable", "Noto Sans Arabic Variable", ui-sans-serif, system-ui, sans-serif;
+
+  /* Motion */
+  --token-ease-cinematic: cubic-bezier(0.16, 1, 0.3, 1);
+  --token-ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --token-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --token-duration-fast: 180ms;
+  --token-duration-base: 320ms;
+  --token-duration-slow: 600ms;
+  --token-duration-cinematic: 1000ms;
+
+  /* Projection safe areas */
+  --safe-x: clamp(1.25rem, 4.8vw, 6.5rem);
+  --safe-y: clamp(1rem, 3.4vh, 3rem);
+
+  /* Layering */
+  --layer-base: 0;
+  --layer-header: 40;
+  --layer-overlay: 60;
+  --layer-dialog: 80;
+  --layer-skip: 100;
+
+  /* Geometry */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}

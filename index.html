@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#050506" />
+    <title>HIV — The Ultimate Interactive Experience</title>
+    <meta
+      name="description"
+      content="Understanding the Virus. Exploring the Science. Breaking the Stigma. A cinematic, evidence-led interactive medical experience about HIV."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HIV — The Ultimate Interactive Experience" />
+    <meta
+      property="og:description"
+      content="Understanding the Virus. Exploring the Science. Breaking the Stigma."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #050506;
+      }
+      .boot-screen {
+        min-height: 100svh;
+        display: grid;
+        place-content: center;
+        justify-items: center;
+        gap: 0.9rem;
+        background: #050506;
+        color: #f4f1ec;
+        font-family: system-ui, sans-serif;
+      }
+      .boot-mark {
+        position: relative;
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+      }
+      .boot-ring {
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgba(244, 241, 236, 0.24);
+        border-radius: 50%;
+      }
+      .boot-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #d21f3c;
+      }
+      .boot-title {
+        margin: 0;
+        font-size: 1.05rem;
+        letter-spacing: 0.38em;
+      }
+      .boot-label {
+        margin: 0;
+        font-size: 0.58rem;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: #807d79;
+      }
+      .boot-line {
+        position: relative;
+        width: 120px;
+        height: 1px;
+        overflow: hidden;
+        background: rgba(244, 241, 236, 0.12);
+      }
+      .boot-line::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 45%;
+        background: #d21f3c;
+        animation: boot-sweep 1.8s ease-in-out infinite;
+      }
+      @keyframes boot-sweep {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(250%);
+        }
+      }
+      .noscript-message {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        background: #050506;
+        color: #f4f1ec;
+        font-family: system-ui, sans-serif;
+        text-align: center;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .boot-line::after {
+          animation: none;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="boot-screen" role="status" aria-live="polite">
+        <div class="boot-mark" aria-hidden="true">
+          <span class="boot-ring"></span>
+          <span class="boot-dot"></span>
+        </div>
+        <p class="boot-title">HIV</p>
+        <p class="boot-label">Loading the experience</p>
+        <span class="boot-line" aria-hidden="true"></span>
+      </div>
+    </div>
+    <noscript>
+      <div class="noscript-message">
+        <p>This experience requires JavaScript. Please enable it to continue.</p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

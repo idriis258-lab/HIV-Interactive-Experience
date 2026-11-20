@@ -1,0 +1,17 @@
+{
+  "name": "HIV — The Ultimate Interactive Experience",
+  "short_name": "HIV Experience",
+  "description": "Understanding the Virus. Exploring the Science. Breaking the Stigma.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050506",
+  "theme_color": "#050506",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
